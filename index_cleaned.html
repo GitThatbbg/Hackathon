@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syntax Terror - Code for life!</title>
+  <link rel="stylesheet" href="improved.css">
+</head>
+<body>
+  <header>
+    <h1>Syntax Terror website</h1>
+    <p id="tagline"></p>
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#weather">Weather</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <section id="about" class="fade-in">
+      <h2>About</h2>
+      <p>We are the coders</p>
+    </section>
+
+    <section id="skills" class="fade-in">
+      <h2>Skills</h2>
+      <p>Placeholder for skills.</p>
+    </section>
+
+    <section id="projects" class="fade-in">
+      <h2>Projects</h2>
+      <p>Placeholder for projects.</p>
+    </section>
+
+    <section id="timeline" class="fade-in">
+      <h2>Timeline</h2>
+      <p>Placeholder for timeline.</p>
+    </section>
+
+    <!-- Weather section -->
+    <section id="weather" class="fade-in">
+      <h2>Weather</h2>
+      <div class="weather-card">
+        <form id="weatherForm" class="weather-form" autocomplete="off">
+          <label class="sr-only" for="cityInput">City</label>
+          <input id="cityInput" type="text" placeholder="Search city (e.g., Stockholm)" />
+          <button type="submit" id="searchBtn">Search</button>
+          <button type="button" id="locateBtn" title="Use my location">📍 Use my location</button>
+        </form>
+
+        <div id="weatherStatus" class="weather-status" aria-live="polite"></div>
+
+        <div id="weatherResult" class="weather-result" hidden>
+          <div class="weather-top">
+            <div>
+              <div class="weather-place" id="placeName">—</div>
+              <div class="weather-updated" id="updatedTime">—</div>
+            </div>
+            <div class="weather-current">
+              <div class="weather-emoji" id="weatherEmoji">☁️</div>
+              <div>
+                <div class="weather-temp" id="tempNow">—°</div>
+                <div class="weather-desc" id="descNow">—</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="weather-grid">
+            <div class="weather-item">
+              <span>Feels like</span>
+              <strong id="feelsLike">—°</strong>
+            </div>
+            <div class="weather-item">
+              <span>Wind</span>
+              <strong id="windNow">— m/s</strong>
+            </div>
+            <div class="weather-item">
+              <span>Today</span>
+              <strong id="minmaxToday">— / — °C</strong>
+            </div>
+            <div class="weather-item">
+              <span>Precip (next hr)</span>
+              <strong id="precipNextHour">— mm</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="weather-note">Powered by Open-Meteo (no API key required).</p>
+    </section>
+
+    <!-- Contact section with validation form -->
+    <section id="contact" class="fade-in">
+      <h2>Contact</h2>
+      <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        <label for="fname">Name:</label>
+        <input type="text" id="fname" name="fname">
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; Template</p>
+  </footer>
+
+  <!-- Scroll-to-top button -->
+  <button id="scrollTopBtn" title="Go to top">↑ Top</button>
+
+  <!-- External scripts -->
+  <script src="app.js"></script>
+  <script src="java.js"></script>
+  <script src="weather.js"></script>
+</body>
+</html>
